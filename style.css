@@ -1,0 +1,289 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    overflow-x: none;
+    cursor: default;
+}
+
+body{
+    display: flex;
+    max-width: 700px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(imgs/back.png);
+    background-size: 100%;
+}
+
+button{
+    font-size: 2rem;
+    height: 70px;
+    padding: 0.5rem 2rem;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin: 1rem auto;
+    display: block;
+    background-color: lightgreen;
+}
+
+button:hover{
+    background-color: yellow;
+}
+
+p{
+    margin-top: 3rem;
+}
+
+.bottom{
+    width: 500px;
+    justify-content: center;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.top{
+    margin-top: 5rem;
+    width: 500px;
+    display: grid;
+    text-align: center;
+}
+
+.colorText{
+    font: 2.5rem sans-serif;
+    align-self: center;
+}
+
+.lbl{
+    font: 1.25rem sans-serif;
+    color: aliceblue;
+}
+
+.game_menu_value{
+    font: 1.25rem sans-serif;
+    font-weight: bold;
+}
+
+.answ{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 1.25rem sans-serif;
+    margin: 1px;
+    background-color: #f0f8ff60;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 55px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.answleft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 1.25rem sans-serif;
+    margin: 1px;
+    background-color: #f0f8ff60;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 55px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.answ:hover, .answleft:hover{
+    background-color: #f0f8ff;
+}
+
+#game_box{
+    display: none;
+}
+
+#game_menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    min-width: 288px;
+    padding: 0 16px;
+    background-color: hsla(0,0%,100%,.4);
+    color: #333;
+}
+
+.game_menu_row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#color1, #color2{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 180px;
+    border-radius: 7px;
+}
+
+#btns{
+    margin-top: 2rem;
+    width: 600px;
+    display: flex;
+}
+
+#top_vars{
+    width: 600px;
+    margin-top: 40px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#question{
+    font: 2rem sans-serif;
+    color: aliceblue;
+}
+#helpText{
+    cursor:default;
+    margin-top: 5rem;
+    display: none;
+    flex-direction: column;
+    text-align:center;
+    justify-content: center;
+    font: 2rem sans-serif;
+    color: aliceblue;
+}
+
+#startGameBtns{
+    margin: 5rem;
+}
+
+
+#checkmark, #wrong{
+    pointer-events: none;
+    position: absolute;
+    width: 5%;
+    left: 47.6%;
+    top: 30%;
+    opacity: 0;
+}
+
+#timer{
+    pointer-events: none;
+    display: none;
+    justify-content: center;
+    font: 5rem sans-serif;
+    background-color: #f0f8ffb9;
+    border-radius: 50%;
+    width: 6rem;
+    margin: 10rem;
+    opacity: 0;
+}
+
+@media only screen and (max-width: 500px){
+    #checkmark, #wrong{
+        position: absolute;
+        width: 10%;
+        left: 58%;
+        top: 35%;
+    }
+}
+
+.trainansw{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 1.25rem sans-serif;
+    margin: 1px;
+    background-color: #f0f8ff60;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 55px;
+    border-radius: 0px 5px 5px 0px;
+    animation: glowing 1300ms infinite;
+}
+
+.trainanswleft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 1.25rem sans-serif;
+    margin: 1px;
+    background-color: #f0f8ff60;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 55px;
+    border-radius: 5px 0px 0px 5px;
+    animation: glowing 1300ms infinite;
+}
+
+@keyframes glowing {
+    0% { background-color: #f0f8ff60; box-shadow: 0 0 5px #f0f8ff60; }
+    50% { background-color: #f0f8ff; box-shadow: 0 0 20px #f0f8ff; }
+    100% { background-color: #f0f8ff60; box-shadow: 0 0 5px #f0f8ff60; }
+}
+
+.firstLoadColorWord{
+    animation: firstcolorWord 800ms;
+}
+
+@keyframes firstcolorWord{
+    0%{width: 100px; height: 80px; margin: 50px 70px; backface-visibility: hidden; color: white;}
+    70%{width: 240px; height: 80px; margin: 50px 0px; backface-visibility: hidden; color: white;}
+    100%{width: 240px; height: 180px; margin: 0px; backface-visibility: hidden; color: white;}
+}
+
+.loadColorWord{
+    animation: colorWord 400ms;
+}
+
+@keyframes colorWord{
+    0%{transform: rotateX(0deg); backface-visibility: hidden; color: white;}
+    100%{transform: rotateX(360deg); backface-visibility: hidden; color: white;}
+}
+
+.fadeAway{
+    animation: fadeAway 400ms;
+}
+
+.fadeAwayTimer{
+    animation: fadeAway 950ms;
+}
+
+@keyframes fadeAway{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.fageWiggle{
+    animation: fageWiggle 400ms;
+}
+
+@keyframes fageWiggle{
+    0%{opacity: 0;transform: rotate(0deg);}
+    25%{opacity: 0.5;transform: rotate(30deg);}
+    50%{opacity: 1;transform: rotate(0deg);}
+    75%{opacity: 0.5;transform: rotate(-30deg);}
+    100%{opacity: 0;transform: rotate(0deg);}
+}
+
+.fageScale{
+    animation: fageScale 400ms;
+}
+
+@keyframes fageScale{
+    0%{opacity: 0;transform: scale(1);}
+    50%{opacity: 1;transform: scale(1.2);}
+    100%{opacity: 0;transform: scale(1);}
+}
+
+
+

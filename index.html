@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Цветовод</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="timer"></div>
+<div id="startGameBtns">
+    <button id="start" onclick="startGame()">Начать игру</button>
+    <button id="training" onclick="startTraining()">Пройти обучение</button>
+    <button id="help" onclick="help()">Правила</button>
+</div>
+<div id="helpText">
+Необходимо сопоставить пары карточек. Слева написан цвет (например, Красный), а Cправа — цветной текст.<br>Если цвет текста справа совпадает с названием цвета слева — нажмите «ДА». Если нет — нажмите «НЕТ».
+<p>Для управления можно использовать мышь или стрелочки на клавиатуре.<br>Для возврата к меню — Esc</p>
+<p><b>Нажмите на текст, чтобы продолжить</b></p>
+</div>
+<div id="game_box">
+    <div id="game_menu">
+        <div class="game_menu_row">
+            <div>ВРЕМЯ</div>
+            <div id="time" class="game_menu_value">0</div>
+        </div>
+        <div class="game_menu_row">
+            <div>ОЧКИ</div>
+            <div id="score" class="game_menu_value">0</div>
+        </div>
+        <div class="game_menu_row">
+            <div>БОНУС</div>
+            <div id="multi" class="game_menu_value">x1</div>
+        </div>
+    </div>
+    <div class="top">
+        <div id="question" class="colorText"> Совпадает ли название цвета на левой карточке с цветом текста на правой карточке?</div>
+        <div id="top_vars">
+            <div class="colorTextBox">
+                <div class="colorText lbl">Значение</div>
+                <div id="color1" class="colorText color1"></div>
+            </div>
+            <div class="colorTextBox">
+                <div class="colorText lbl">Цвет</div>
+                <div id="color2" class="colorText color2"></div>
+            </div>
+        </div>
+        <img src="imgs/correct.svg" alt="" id="checkmark">
+        <img src="imgs/incorrect.svg" alt="" id="wrong">
+        
+    </div>
+    <div id="btns" class="bottom">
+        <div id="No" class="answleft">⏴Нет</div>
+        <div id="Yes" class="answ">Да⏵</div>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
